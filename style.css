@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background: hsl(0, 0%, 95%)
+}
+header{
+    display: flex;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    align-items: center;
+    
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+header #logo{
+    width: 50px;
+    margin-right: 5%;
+}
+#firstList{
+    display: flex;
+    gap: 20%;
+    color: hsl(0, 0%, 41%);
+}
+#firstList li a{
+    color: hsl(0, 0%, 41%);
+}
+#firstList div{
+    display: flex;
+    position: relative;
+    color: hsl(0, 0%, 41%);
+}
+#secondList{
+    gap: 1rem;
+    cursor: pointer;
+    color: hsl(0, 0%, 41%);
+}
+#secondList li div{
+    border: 1px solid hsl(0, 0%, 95%);
+    border-radius:10px;
+    height: 30px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#secondList li div:hover{
+    border: 2px solid #000000;
+}
+header nav ul img{
+    width: 10px;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+ a{
+    text-decoration: none;
+    color: black;
+}
+img{
+    object-fit: contain;
+    width: 100px;  
+}
+.up-arrow{
+    display: none;
+    position: absolute;
+    left: 105%;
+    top: 40%;
+}
+.show{
+    display: flex;
+}
+.down-arrow{
+    /* display: none; */
+    position: absolute;
+    left: 105%;
+    top: 40%;
+}
+.unshow{
+    display: none;
+}
+
+.mobile{
+    display: none;
+}
+
+main{
+    display: flex;
+    height: 500px;
+    width: 100%;
+}
+main img{
+    height: 100%;
+    flex: 1;
+}
+main section{
+    flex: 1;
+    padding-left: 2.5rem;
+}
+main section h1{
+    font-size:3rem;
+    margin-top: 6rem;
+}
+main section p{
+    width: 45%;
+    margin: 2rem 0;
+    line-height: 1.7;
+    color: hsl(0, 0%, 41%);
+}
+main section a{
+    background: black;
+    color: #ffffff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.6rem;
+    font-weight: bold;
+}
+main section a:hover{
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+main section ul{
+    margin-top: 7rem;
+    justify-content: space-between;
+    width: 80%;
+}
+.dropdown-1{
+    position: absolute;
+    visibility: hidden;
+    background:#ffffff;
+    height: 170px;
+    top:150%;
+    left:-100%;
+    width: 150px;
+    line-height: 2.5;
+    border-radius: 0.3rem;
+    /* display: none; */
+}
+.dropdown-1 img{
+    width: 20px;
+
+}
+#parent1,#parent2{
+    position: relative;
+}
+.dropdown-1 div{
+    display: flex;
+    gap: 0.3rem;
+}
+.dropdown-2{
+    visibility: hidden;
+    position: absolute;
+    background: #ffffff;
+    height: 130px;
+    left: 4%;
+    top:150%;
+    width: 120px;
+    border-radius: 0.3rem;
+    /* display: none; */
+    line-height: 2;
+}
+.active{
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inactive{
+    visibility: hidden;
+}
+.dropdown-2 li{
+    list-style: none;
+}
+.dropdown-2 ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 900px){
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+    }
+    header{
+        display: flex;
+        margin-bottom: 3rem;
+        padding: 0.8rem;
+        align-items: center;
+        
+    }
+    header nav{
+        /* display: flex;
+        justify-content: space-between;
+        width: 100%; */
+        display: none;
+    }
+    #hamburger-mobile{
+        width: 30px;
+        position: absolute;
+        left: 90%;
+    }
+    #hamburger-mobile.okayy{
+        display: none;
+    }
+    #mobile-img{
+        width: 100%;
+        object-fit: contain;
+    }
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        width: 100%;
+    }
+    main section{
+        flex: 1;
+        padding-left: 2.5rem;
+    }
+    main section h1{
+        font-size:2.5rem;
+        margin-top: 3rem;
+    }
+    main section p{
+        width: 100%;
+    }
+    .learnWrap{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    main section a{
+        padding: 0.4rem 1.2rem;
+        border-radius: 0.4rem;
+    }
+    main section ul{
+        margin-top: 2rem;
+        width: 100%;
+    }
+    main section ul img{
+        width: 70px;
+    }
+    #secondDropdown{
+        background-color: #ffffff;
+        display: none;
+        flex-direction: column;
+        height: 100vh;
+        width: 50%;
+        left: 50%;
+        position: absolute;
+        line-height: 2;
+        padding: 2rem 0 0 1rem;
+        color:  hsl(0, 0%, 41%);
+        transition: all ease-in-out 1s;
+    }
+    #secondDropdown.okay{
+        display: flex;
+    }
+    #one,#two,#three,#four{
+        color:  hsl(0, 0%, 41%);
+    }
+    #icon-close{
+        position: absolute;
+        width: 30px;
+        right: 5%;
+        top: 1%;
+        z-index: +1;
+        display: none;
+    }
+    #icon-close.okayyy{
+        display: flex;
+    }
+    .up,.down{
+        width: 10px;
+    }
+    #secondDropdown ul+ul{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+    #firstSpan{
+        border: 2px solid #ffffff;
+        padding: 0.5rem 3.5rem;
+        border-radius: 1rem;
+    }
+    #secondSpan{
+        border: 2px solid #ffffff;
+        padding: 0.5rem 3rem;
+        border-radius: 1rem;
+    }
+    #firstSpan:hover{
+        border-color: hsl(0, 0%, 41%);
+    }
+    #secondSpan:hover{
+        border-color: hsl(0, 0%, 41%);
+    }
+    #second div img{
+        width: 20px;
+    }
+    #second{
+        margin-left: 1rem;
+        color:  hsl(0, 0%, 41%);
+        display: none;
+        line-height: 2;
+    }
+    #second.seconded{
+        display: flex;
+        flex-direction: column;
+    }
+    .third{
+        display: flex;
+    }
+    .third span{
+        margin-left: 8%;
+    }
+    #fourth{
+        display: none;
+        line-height: 2;
+    }
+    #fourth.four{
+        display: flex;
+    }
+    #fourth ul{
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+    }
+    #fourth ul li a{
+        color:  hsl(0, 0%, 41%);
+    }
+    #features,#companies{
+        position: relative;
+    }
+    .up{
+        position: absolute;
+        top: 50%;
+        left:100%
+    }
+    .down{
+        position: absolute;
+        top: 50%;
+        left:100%
+    }
+    #up11,#up22{
+        display: none;
+    }
+    #up11.rema{
+        display: flex;
+    }
+    #up22.bnxn{
+        display: flex;
+    }
+    #down11,#down22{
+        display: flex;
+    }
+    #down11.posty{
+        display: none;
+    }
+    #down22.drake{
+        display: none;
+    }
+
+}
