@@ -126,6 +126,11 @@ main section a:hover{
     color: #000000;
     border: 1px solid #000000;
 }
+main section a:focus{
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
 main section ul{
     margin-top: 7rem;
     justify-content: space-between;
@@ -233,7 +238,7 @@ main section ul{
         margin-top: 3rem;
     }
     main section p{
-        width: 100%;
+        width: 80%;
     }
     .learnWrap{
         width: 100%;
@@ -253,7 +258,7 @@ main section ul{
         width: 70px;
     }
     #secondDropdown{
-        background-color: #ffffff;
+        background: #ffffff;
         display: none;
         flex-direction: column;
         height: 100vh;
@@ -263,7 +268,7 @@ main section ul{
         line-height: 2;
         padding: 2rem 0 0 1rem;
         color:  hsl(0, 0%, 41%);
-        transition: all ease-in-out 1s;
+
     }
     #secondDropdown.okay{
         display: flex;
